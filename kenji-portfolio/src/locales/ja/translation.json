@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "title": "KENJI GUTIERREZ JIMENEZ | AI・DX推進エンジニア",
+    "description": "AIとDXで事業成果を創出するプロダクトマネージャー・エンジニア"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "AI・DX・プロダクト開発",
+    "title": "KENJI",
+    "familyName": "GUTIERREZ JIMENEZ",
+    "description": "AIを活用したデジタルトランスフォーメーションを推進し、プロダクトマネジメントとオペレーション最適化で事業成果を創出します",
+    "cta": "プロジェクトを見る",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "number": "01",
+    "title": "About",
+    "lead": "エンジニアリングからプロダクト、プロジェクトマネジメント、AI活用まで幅広い領域を横断し、<highlight>技術を事業成果につなげる</highlight>アプローチを得意としています。",
+    "description1": "機械工学のバックグラウンドを持ち、データ分析・AI・業務自動化の実践経験を通じて、複雑な課題を構造化し解決へ導きます。",
+    "description2": "90名規模のプロジェクトリーダーとして培ったマネジメント力と、11拠点へのAI展開を主導した推進力を強みとしています。",
+    "stats": {
+      "hoursReduced": {
+        "value": "1600h+",
+        "label": "年間削減時間"
+      },
+      "teamSize": {
+        "value": "90名",
+        "label": "チーム規模"
+      },
+      "worldRank": {
+        "value": "8位",
+        "label": "BWSC世界大会"
+      },
+      "aiDeployment": {
+        "value": "11拠点",
+        "label": "AI展開規模"
+      }
+    }
+  },
+  "expertise": {
+    "heading": "What I Do",
+    "items": {
+      "ai": {
+        "title": "AI活用・DX推進",
+        "description": "生成AIを活用した業務効率化、データ分析基盤の構築、組織全体へのAI導入戦略の立案・実行を担います。"
+      },
+      "product": {
+        "title": "プロダクト開発",
+        "description": "ユーザーリサーチからPRD策定、開発チームとの協働まで、プロダクトの企画から成長までを一貫して推進します。"
+      },
+      "automation": {
+        "title": "業務自動化",
+        "description": "繰り返し作業の自動化、ワークフロー最適化により、チームの生産性を大幅に向上させます。"
+      }
+    }
+  },
+  "experience": {
+    "number": "02",
+    "title": "Experience",
+    "items": {
+      "anymind": {
+        "company": "AnyMind Group",
+        "badge": "Internship",
+        "roles": {
+          "ai": {
+            "title": "AI推進室・DX&AI事業部 / AIプロジェクトマネージャー",
+            "period": "2025.04 - 2025.11",
+            "description": "AI推進室にて、全社的なAI活用戦略の立案・実行を担当。",
+            "achievements": [
+              "アジア11拠点へのAI導入戦略立案",
+              "社内業務効率化ツール開発・運用"
+            ]
+          },
+          "product": {
+            "title": "Product Development事業部 / プロダクトマネージャー",
+            "period": "2025.01 - 2025.04",
+            "achievements": [
+              "スライド自動生成システム開発（−200h/年）",
+              "営業メール自動化（−600h/年）"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "number": "03",
+    "title": "Projects",
+    "subtitle": "Selected Works 2022-2025",
+    "viewCaseStudy": "詳細を見る",
+    "items": {
+      "bwsc25": {
+        "category": "Leadership",
+        "title": "BWSC25 ソーラーカーレース",
+        "period": "2024.09 - 2025.09",
+        "description": "プロジェクトマネージャー / レースストラテジストとして、限られた電力資源で最大成果を出すための非属人的な予測システムを構築・運用。日本ー豪州間の複雑な輸出入手続きおよび、数十名規模の渡航オペレーションをリード。",
+        "tags": ["Project Management", "Strategy", "Operations"],
+        "caseStudy": {
+          "overview": "世界最高峰のソーラーカーレース「Bridgestone World Solar Challenge」に挑戦。プロジェクトマネージャーとして90名規模のチームを率い、限られたリソースで最大の成果を追求しました。",
+          "challenge": {
+            "title": "課題",
+            "description": "3000kmを太陽光エネルギーのみで走破するという極限の制約の中、予測不可能な天候と限られた電力リソースをいかに最適化するかが最大の課題でした。"
+          },
+          "approach": {
+            "title": "アプローチ",
+            "steps": [
+              "機械学習による発電量・消費量の予測モデル構築",
+              "リアルタイムデータ収集・分析システムの開発",
+              "意思決定の属人化を排除するプロセス設計"
+            ]
+          },
+          "results": {
+            "title": "成果",
+            "metrics": [
+              { "label": "予測精度", "value": "95%以上" },
+              { "label": "開発期間短縮", "value": "2ヶ月" },
+              { "label": "チーム規模", "value": "90名" }
+            ]
+          }
+        }
+      },
+      "bwsc23": {
+        "category": "Engineering",
+        "title": "BWSC23 ソーラーカーレース",
+        "period": "2022.01 - 2024.08",
+        "description": "90名規模のチーム運営において、DX推進によるオペレーションの最適化で開発期間を12ヶ月から10ヶ月に短縮。世界大会8位入賞を達成。",
+        "tags": ["DX", "Team Leadership", "World 8th"]
+      },
+      "automation": {
+        "category": "AI / Automation",
+        "title": "業務自動化ツール開発",
+        "period": "2025",
+        "description": "スライド自動生成システム、営業メール自動化など、複数の内製ツールを開発。年間1600時間以上の業務効率化を実現。",
+        "tags": ["Automation", "AI", "-1600h/year"]
+      }
+    }
+  },
+  "skills": {
+    "number": "05",
+    "title": "Skills",
+    "categories": {
+      "technical": {
+        "title": "Technical Skills",
+        "items": ["Python", "SQL", "機械学習", "データ分析", "React", "TypeScript"]
+      },
+      "management": {
+        "title": "Management",
+        "items": ["プロジェクトマネジメント", "プロダクトマネジメント", "チームリーダーシップ", "アジャイル開発"]
+      },
+      "languages": {
+        "title": "Languages",
+        "items": ["日本語（ネイティブ）", "スペイン語（ネイティブ）", "英語（ビジネスレベル）"]
+      },
+      "certifications": {
+        "title": "Certifications",
+        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
+      }
+    }
+  },
+  "education": {
+    "number": "04",
+    "title": "Education",
+    "items": {
+      "master": {
+        "period": "2024 - 2026",
+        "school": "工学院大学大学院",
+        "degree": "工学研究科 機械工学専攻 修士課程",
+        "description": "自動制御研究室にて時系列データ予測・異常検知の研究に従事。"
+      },
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "工学院大学",
+        "degree": "工学部 機械システム工学科",
+        "gpa": "GPA: 3.33 / 4.00",
+        "description": "機械工学を専攻し、ソーラーカープロジェクトでリーダーシップを発揮。"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Let's Connect",
+    "subheading": "新しいプロジェクトやコラボレーションの機会について、お気軽にご連絡ください。",
+    "cta": "Contact on LinkedIn"
+  },
+  "footer": {
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "copyright": "© 2025 All rights reserved.",
+    "linkedin": "LinkedIn"
+  }
+}

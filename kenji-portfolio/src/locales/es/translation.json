@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "title": "KENJI GUTIERREZ JIMENEZ | Ingeniero de IA y DX",
+    "description": "Product Manager e Ingeniero impulsando resultados de negocio a través de IA y Transformación Digital"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "IA・DX・Desarrollo de Productos",
+    "title": "KENJI",
+    "familyName": "GUTIERREZ JIMENEZ",
+    "description": "Impulsando la Transformación Digital con IA, Gestión de Productos y Excelencia Operacional",
+    "cta": "Ver Proyectos",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "number": "01",
+    "title": "Sobre mí",
+    "lead": "Conectando ingeniería, gestión de productos e implementación de IA, me especializo en <highlight>vincular la tecnología con los resultados de negocio</highlight>.",
+    "description1": "Con formación en ingeniería mecánica y experiencia práctica en análisis de datos, IA y automatización, destaco en estructurar desafíos complejos e impulsar soluciones.",
+    "description2": "Mis fortalezas incluyen experiencia de liderazgo gestionando proyectos de 90 personas y capacidades de ejecución demostradas liderando la implementación de IA en 11 ubicaciones.",
+    "stats": {
+      "hoursReduced": {
+        "value": "1600h+",
+        "label": "Horas Ahorradas/Año"
+      },
+      "teamSize": {
+        "value": "90",
+        "label": "Tamaño del Equipo"
+      },
+      "worldRank": {
+        "value": "8°",
+        "label": "Ranking Mundial BWSC"
+      },
+      "aiDeployment": {
+        "value": "11",
+        "label": "Sitios de Implementación IA"
+      }
+    }
+  },
+  "expertise": {
+    "heading": "Lo que hago",
+    "items": {
+      "ai": {
+        "title": "Promoción de IA y DX",
+        "description": "Implementación de eficiencia operacional a través de IA generativa, construcción de infraestructura de análisis de datos y planificación/ejecución de estrategias de adopción de IA en toda la organización."
+      },
+      "product": {
+        "title": "Desarrollo de Productos",
+        "description": "Desde investigación de usuarios hasta creación de PRD y colaboración con equipos de desarrollo, impulso productos desde la concepción hasta el crecimiento."
+      },
+      "automation": {
+        "title": "Automatización de Negocios",
+        "description": "Mejora significativa de la productividad del equipo a través de la automatización de tareas repetitivas y optimización de flujos de trabajo."
+      }
+    }
+  },
+  "experience": {
+    "number": "02",
+    "title": "Experiencia",
+    "items": {
+      "anymind": {
+        "company": "AnyMind Group",
+        "badge": "Prácticas",
+        "roles": {
+          "ai": {
+            "title": "Oficina de Promoción de IA・División DX&AI / Gerente de Proyectos de IA",
+            "period": "2025.04 - 2025.11",
+            "description": "En la Oficina de Promoción de IA, responsable de planificar y ejecutar la estrategia de utilización de IA en toda la empresa.",
+            "achievements": [
+              "Planificación de estrategia de implementación de IA para 11 ubicaciones en Asia",
+              "Desarrollo y operaciones de herramientas de eficiencia interna"
+            ]
+          },
+          "product": {
+            "title": "División de Desarrollo de Productos / Product Manager",
+            "period": "2025.01 - 2025.04",
+            "achievements": [
+              "Desarrollo de sistema de auto-generación de diapositivas (−200h/año)",
+              "Automatización de correos de ventas (−600h/año)"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "number": "03",
+    "title": "Proyectos",
+    "subtitle": "Trabajos Seleccionados 2022-2025",
+    "viewCaseStudy": "Ver Detalles",
+    "items": {
+      "bwsc25": {
+        "category": "Liderazgo",
+        "title": "Carrera de Autos Solares BWSC25",
+        "period": "2024.09 - 2025.09",
+        "description": "Como Gerente de Proyecto y Estratega de Carrera, construí y operé un sistema de predicción no personalizado para maximizar resultados con recursos de energía limitados. Lideré procedimientos complejos de importación/exportación Japón-Australia y operaciones de viaje para decenas de miembros del equipo.",
+        "tags": ["Gestión de Proyectos", "Estrategia", "Operaciones"],
+        "caseStudy": {
+          "overview": "Desafié la carrera de autos solares más importante del mundo 'Bridgestone World Solar Challenge'. Como gerente de proyecto, lideré un equipo de 90 personas buscando resultados máximos con recursos limitados.",
+          "challenge": {
+            "title": "Desafío",
+            "description": "El mayor desafío fue optimizar el clima impredecible y los recursos de energía limitados mientras recorríamos 3000km solo con energía solar."
+          },
+          "approach": {
+            "title": "Enfoque",
+            "steps": [
+              "Construcción de modelo de predicción de generación/consumo de energía basado en ML",
+              "Desarrollo de sistema de recolección y análisis de datos en tiempo real",
+              "Diseño de procesos para eliminar dependencias en la toma de decisiones"
+            ]
+          },
+          "results": {
+            "title": "Resultados",
+            "metrics": [
+              { "label": "Precisión de Predicción", "value": "95%+" },
+              { "label": "Tiempo de Desarrollo Ahorrado", "value": "2 meses" },
+              { "label": "Tamaño del Equipo", "value": "90 miembros" }
+            ]
+          }
+        }
+      },
+      "bwsc23": {
+        "category": "Ingeniería",
+        "title": "Carrera de Autos Solares BWSC23",
+        "period": "2022.01 - 2024.08",
+        "description": "En la gestión de un equipo de 90 personas, acorté el período de desarrollo de 12 a 10 meses a través de la optimización operacional impulsada por DX. Logré el 8° lugar en el Campeonato Mundial.",
+        "tags": ["DX", "Liderazgo de Equipo", "8° Mundial"]
+      },
+      "automation": {
+        "category": "IA / Automatización",
+        "title": "Herramientas de Automatización de Negocios",
+        "period": "2025",
+        "description": "Desarrollé múltiples herramientas internas incluyendo auto-generación de diapositivas y automatización de correos de ventas. Logré más de 1600 horas de mejora de eficiencia operacional anual.",
+        "tags": ["Automatización", "IA", "-1600h/año"]
+      }
+    }
+  },
+  "skills": {
+    "number": "05",
+    "title": "Habilidades",
+    "categories": {
+      "technical": {
+        "title": "Habilidades Técnicas",
+        "items": ["Python", "SQL", "Machine Learning", "Análisis de Datos", "React", "TypeScript"]
+      },
+      "management": {
+        "title": "Gestión",
+        "items": ["Gestión de Proyectos", "Gestión de Productos", "Liderazgo de Equipos", "Desarrollo Ágil"]
+      },
+      "languages": {
+        "title": "Idiomas",
+        "items": ["Japonés (Nativo)", "Español (Nativo)", "Inglés (Negocios)"]
+      },
+      "certifications": {
+        "title": "Certificaciones",
+        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
+      }
+    }
+  },
+  "education": {
+    "number": "04",
+    "title": "Educación",
+    "items": {
+      "master": {
+        "period": "2024 - 2026",
+        "school": "Escuela de Posgrado Universidad Kogakuin",
+        "degree": "Maestría en Ingeniería Mecánica",
+        "description": "Investigación sobre predicción de datos de series temporales y detección de anomalías en el Laboratorio de Control Automático."
+      },
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "Universidad Kogakuin",
+        "degree": "Licenciatura en Ingeniería de Sistemas Mecánicos",
+        "gpa": "GPA: 3.33 / 4.00",
+        "description": "Especialización en Ingeniería Mecánica, demostré liderazgo en el Proyecto de Auto Solar."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Conectemos",
+    "subheading": "No dudes en contactarme sobre nuevos proyectos u oportunidades de colaboración.",
+    "cta": "Contactar en LinkedIn"
+  },
+  "footer": {
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "copyright": "© 2025 Todos los derechos reservados.",
+    "linkedin": "LinkedIn"
+  }
+}

@@ -1,0 +1,282 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation template to deploy an All-in-One WordPress and MariaDB on a single EC2 instance.'
+
+Metadata:
+  'AWS::CloudFormation::Interface':
+    ParameterGroups:
+      - Label:
+          default: 'EC2 Configuration'
+        Parameters:
+          - KeyPairName
+          - InstanceType
+      - Label:
+          default: 'Database Configuration'
+        Parameters:
+          - DBName
+          - DBUser
+          - DBPassword
+      - Label:
+          default: 'WordPress Configuration'
+        Parameters:
+          - WordPressAdminUser
+          - WordPressAdminPassword
+          - WordPressAdminEmail
+
+Parameters:
+  KeyPairName:
+    Description: 'Name of an existing EC2 KeyPair to enable SSH access to the instance.'
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    Default: 'vockey' # Constraint: KeyPair: vockey
+    ConstraintDescription: 'must be the name of an existing EC2 KeyPair.'
+
+  InstanceType:
+    Description: 'The EC2 instance type for the WordPress server.'
+    Type: String
+    Default: t3a.small # Constraint: Instance Type: t3a.small
+    AllowedValues:
+      - t3a.small
+      - t3a.medium
+      - t3.small
+      - t3.medium
+    ConstraintDescription: 'must be a valid EC2 instance type.'
+
+  DBName:
+    Description: 'The database name for WordPress.'
+    Type: String
+    Default: wordpressdb
+    MinLength: '1'
+    MaxLength: '64'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: 'must begin with a letter and contain only alphanumeric characters.'
+
+  DBUser:
+    Description: 'The database master user name for WordPress.'
+    Type: String
+    Default: admin
+    MinLength: '1'
+    MaxLength: '16'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: 'must begin with a letter and contain only alphanumeric characters.'
+
+  DBPassword:
+    Description: 'The database master user password for WordPress.'
+    Type: String
+    Default: Pa55w0rd!
+    MinLength: '8'
+    MaxLength: '41'
+    NoEcho: 'true'
+
+  WordPressAdminUser:
+    Description: 'The WordPress administrator user name.'
+    Type: String
+    Default: wpadmin
+    MinLength: '1'
+    MaxLength: '64'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: 'must begin with a letter and contain only alphanumeric characters.'
+
+  WordPressAdminPassword:
+    Description: 'The WordPress administrator password.'
+    Type: String
+    Default: WpPa55w0rd!
+    MinLength: '8'
+    MaxLength: '41'
+    NoEcho: 'true'
+
+  WordPressAdminEmail:
+    Description: 'The WordPress administrator email address.'
+    Type: String
+    Default: admin@example.com
+    AllowedPattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    ConstraintDescription: 'must be a valid email address.'
+
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: WP-VPC
+
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: WP-IGW
+
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
+
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.1.0/24
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: subnet-wp-001
+
+  RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: WP-RouteTable
+
+  InternetRoute:
+    Type: AWS::EC2::Route
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId: !Ref RouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  SubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet
+      RouteTableId: !Ref RouteTable
+
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: WebServerSecurityGroup
+      GroupDescription: Enable HTTP and SSH access
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: WP-SecurityGroup
+
+  WebServerInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Sub '{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64}}'
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyPairName
+      IamInstanceProfile: LabInstanceProfile # Constraint: InstanceProfile: LabInstanceProfile
+      NetworkInterfaces:
+        - DeviceIndex: '0'
+          SubnetId: !Ref PublicSubnet
+          GroupSet:
+            - !Ref WebServerSecurityGroup
+          AssociatePublicIpAddress: 'true'
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe
+          exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+          echo "Starting User Data script"
+
+          # Set timezone to Asia/Tokyo
+          ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+          echo "ZONE=\"Asia/Tokyo\"" > /etc/sysconfig/clock
+          hwclock --systohc
+
+          # Update system
+          dnf update -y
+
+          # Install Apache, PHP, MariaDB
+          dnf install -y httpd mariadb105-server php php-mysqlnd php-fpm php-gd php-xml php-mbstring
+          dnf install -y wget
+
+          # Start and enable Apache
+          systemctl start httpd
+          systemctl enable httpd
+
+          # Start and enable MariaDB
+          systemctl start mariadb
+          systemctl enable mariadb
+
+          # Secure MariaDB installation (basic steps - more comprehensive would be interactive)
+          # These commands are often interactive, for UserData we can pre-configure a script
+          # However, a more secure approach for production would be secrets management
+          # For this All-in-One setup, we'll use a direct approach for simplicity
+
+          # Create a temporary SQL file to configure MariaDB
+          cat > /tmp/setup-mysql.sql <<EOF
+          CREATE DATABASE ${DBName} DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+          CREATE USER '${DBUser}'@'localhost' IDENTIFIED BY '${DBPassword}';
+          GRANT ALL PRIVILEGES ON ${DBName}.* TO '${DBUser}'@'localhost';
+          FLUSH PRIVILEGES;
+          EOF
+
+          # Execute the SQL file
+          mysql -u root < /tmp/setup-mysql.sql
+          rm /tmp/setup-mysql.sql
+
+          # Download and extract WordPress
+          wget https://wordpress.org/latest.tar.gz -P /tmp
+          tar -xzf /tmp/latest.tar.gz -C /tmp
+          cp -r /tmp/wordpress/* /var/www/html/
+          rm -rf /tmp/wordpress /tmp/latest.tar.gz
+
+          # Configure WordPress
+          chown -R apache:apache /var/www/html
+          chmod -R 775 /var/www/html
+
+          # Create wp-config.php
+          cat > /var/www/html/wp-config.php <<EOF
+          <?php
+          define( 'DB_NAME', '${DBName}' );
+          define( 'DB_USER', '${DBUser}' );
+          define( 'DB_PASSWORD', '${DBPassword}' );
+          define( 'DB_HOST', 'localhost' );
+          define( 'DB_CHARSET', 'utf8' );
+          define( 'DB_COLLATE', '' );
+          define( 'AUTH_KEY',         'put your unique phrase here' );
+          define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+          define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+          define( 'NONCE_KEY',        'put your unique phrase here' );
+          define( 'AUTH_SALT',        'put your unique phrase here' );
+          define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+          define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+          define( 'NONCE_SALT',       'put your unique phrase here' );
+          $table_prefix = 'wp_';
+          define( 'WP_DEBUG', false );
+          if ( ! defined( 'ABSPATH' ) ) {
+          	define( 'ABSPATH', __DIR__ . '/' );
+          }
+          require_once ABSPATH . 'wp-settings.php';
+          EOF
+
+          # Restart Apache to apply changes
+          systemctl restart httpd
+
+          echo "User Data script completed successfully."
+      Tags:
+        - Key: Name
+          Value: WordPressWebServer
+
+
+Outputs:
+  WebsiteURL:
+    Description: 'The URL of the WordPress website'
+    Value: !Join
+      - ''
+      - - 'http://'
+        - !GetAtt WebServerInstance.PublicIp
+  SSHCommand:
+    Description: 'Command to SSH into the EC2 instance'
+    Value: !Join
+      - ''
+      - - 'ssh -i ~/.ssh/'
+        - !Ref KeyPairName
+        - '.pem ec2-user@'
+        - !GetAtt WebServerInstance.PublicIp

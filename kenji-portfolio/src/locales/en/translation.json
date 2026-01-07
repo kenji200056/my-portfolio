@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "title": "KENJI GUTIERREZ JIMENEZ | AI & DX Engineer",
+    "description": "Product Manager & Engineer driving business outcomes through AI and Digital Transformation"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "AI・DX・Product Development",
+    "title": "KENJI",
+    "familyName": "GUTIERREZ JIMENEZ",
+    "description": "Driving AI-enabled Digital Transformation, Product Management & Operational Excellence",
+    "cta": "View Works",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "number": "01",
+    "title": "About",
+    "lead": "Bridging engineering, product management, and AI implementation, I specialize in <highlight>connecting technology to business outcomes</highlight>.",
+    "description1": "With a mechanical engineering background and hands-on experience in data analysis, AI, and automation, I excel at structuring complex challenges and driving solutions.",
+    "description2": "My strengths include leadership experience managing 90-person projects and the execution capabilities demonstrated by leading AI deployment across 11 locations.",
+    "stats": {
+      "hoursReduced": {
+        "value": "1600h+",
+        "label": "Hours Saved/Year"
+      },
+      "teamSize": {
+        "value": "90",
+        "label": "Team Size"
+      },
+      "worldRank": {
+        "value": "8th",
+        "label": "BWSC World Ranking"
+      },
+      "aiDeployment": {
+        "value": "11",
+        "label": "AI Deployment Sites"
+      }
+    }
+  },
+  "expertise": {
+    "heading": "What I Do",
+    "items": {
+      "ai": {
+        "title": "AI & DX Promotion",
+        "description": "Implementing operational efficiency through generative AI, building data analytics infrastructure, and planning/executing organization-wide AI adoption strategies."
+      },
+      "product": {
+        "title": "Product Development",
+        "description": "From user research to PRD creation to collaboration with development teams, I drive products from conception through growth."
+      },
+      "automation": {
+        "title": "Business Automation",
+        "description": "Significantly improving team productivity through automation of repetitive tasks and workflow optimization."
+      }
+    }
+  },
+  "experience": {
+    "number": "02",
+    "title": "Experience",
+    "items": {
+      "anymind": {
+        "company": "AnyMind Group",
+        "badge": "Internship",
+        "roles": {
+          "ai": {
+            "title": "AI Promotion Office・DX&AI Division / AI Project Manager",
+            "period": "2025.04 - 2025.11",
+            "description": "In the AI Promotion Office, responsible for planning and executing company-wide AI utilization strategy.",
+            "achievements": [
+              "AI deployment strategy planning for 11 locations across Asia",
+              "Internal efficiency tool development and operations"
+            ]
+          },
+          "product": {
+            "title": "Product Development Division / Product Manager",
+            "period": "2025.01 - 2025.04",
+            "achievements": [
+              "Slide auto-generation system development (−200h/year)",
+              "Sales email automation (−600h/year)"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "number": "03",
+    "title": "Projects",
+    "subtitle": "Selected Works 2022-2025",
+    "viewCaseStudy": "View Details",
+    "items": {
+      "bwsc25": {
+        "category": "Leadership",
+        "title": "BWSC25 Solar Car Race",
+        "period": "2024.09 - 2025.09",
+        "description": "As Project Manager and Race Strategist, built and operated a non-personalized prediction system to maximize results with limited power resources. Led complex Japan-Australia import/export procedures and travel operations for dozens of team members.",
+        "tags": ["Project Management", "Strategy", "Operations"],
+        "caseStudy": {
+          "overview": "Challenged the world's premier solar car race 'Bridgestone World Solar Challenge'. As project manager, led a 90-person team pursuing maximum results with limited resources.",
+          "challenge": {
+            "title": "Challenge",
+            "description": "The biggest challenge was optimizing unpredictable weather and limited power resources while traversing 3000km on solar energy alone."
+          },
+          "approach": {
+            "title": "Approach",
+            "steps": [
+              "Built ML-based power generation/consumption prediction model",
+              "Developed real-time data collection and analysis system",
+              "Designed processes to eliminate decision-making dependencies"
+            ]
+          },
+          "results": {
+            "title": "Results",
+            "metrics": [
+              { "label": "Prediction Accuracy", "value": "95%+" },
+              { "label": "Development Time Saved", "value": "2 months" },
+              { "label": "Team Size", "value": "90 members" }
+            ]
+          }
+        }
+      },
+      "bwsc23": {
+        "category": "Engineering",
+        "title": "BWSC23 Solar Car Race",
+        "period": "2022.01 - 2024.08",
+        "description": "In managing a 90-person team, shortened development period from 12 to 10 months through DX-driven operational optimization. Achieved 8th place at the World Championship.",
+        "tags": ["DX", "Team Leadership", "World 8th"]
+      },
+      "automation": {
+        "category": "AI / Automation",
+        "title": "Business Automation Tools",
+        "period": "2025",
+        "description": "Developed multiple internal tools including slide auto-generation and sales email automation. Achieved over 1600 hours of annual operational efficiency improvement.",
+        "tags": ["Automation", "AI", "-1600h/year"]
+      }
+    }
+  },
+  "skills": {
+    "number": "05",
+    "title": "Skills",
+    "categories": {
+      "technical": {
+        "title": "Technical Skills",
+        "items": ["Python", "SQL", "Machine Learning", "Data Analysis", "React", "TypeScript"]
+      },
+      "management": {
+        "title": "Management",
+        "items": ["Project Management", "Product Management", "Team Leadership", "Agile Development"]
+      },
+      "languages": {
+        "title": "Languages",
+        "items": ["Japanese (Native)", "Spanish (Native)", "English (Business)"]
+      },
+      "certifications": {
+        "title": "Certifications",
+        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
+      }
+    }
+  },
+  "education": {
+    "number": "04",
+    "title": "Education",
+    "items": {
+      "master": {
+        "period": "2024 - 2026",
+        "school": "Kogakuin University Graduate School",
+        "degree": "Master's in Mechanical Engineering",
+        "description": "Research on time-series data prediction and anomaly detection in the Automatic Control Laboratory."
+      },
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "Kogakuin University",
+        "degree": "Bachelor's in Mechanical Systems Engineering",
+        "gpa": "GPA: 3.33 / 4.00",
+        "description": "Majored in Mechanical Engineering, demonstrated leadership in the Solar Car Project."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Let's Connect",
+    "subheading": "Feel free to reach out about new projects or collaboration opportunities.",
+    "cta": "Contact on LinkedIn"
+  },
+  "footer": {
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "copyright": "© 2025 All rights reserved.",
+    "linkedin": "LinkedIn"
+  }
+}
