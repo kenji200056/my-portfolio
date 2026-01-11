@@ -3,15 +3,42 @@ import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SkillOrb from './SkillOrb';
 import SkillDetailPanel from './SkillDetailPanel';
-import { skillsData, skillCategories } from '../../../data/skills';
-import type { Skill, LanguageSkill } from '../../../types';
+import { skillsConfig, skillCategories } from '../../../data/skills';
+import type { Skill, LanguageSkill, SkillConfig } from '../../../types';
 
 type SkillType = Skill | LanguageSkill;
+
+// スキル設定から翻訳データを含むSkill型に変換
+function useSkillsWithTranslation() {
+  const { t } = useTranslation();
+
+  const buildSkill = (config: SkillConfig): Skill => ({
+    id: config.id,
+    name: t(`${config.translationKey}.name`),
+    level: config.level,
+    icon: config.icon,
+    description: t(`${config.translationKey}.description`),
+    achievements: t(`${config.translationKey}.achievements`, { returnObjects: true }) as string[],
+    relatedProjects: config.relatedProjectIds?.map(projectId => ({
+      id: projectId,
+      contribution: t(`${config.translationKey}.contributions.${projectId}`, { defaultValue: '' }),
+    })).filter(rp => rp.contribution !== ''),
+  });
+
+  return {
+    technical: skillsConfig.technical.map(buildSkill),
+    soft: skillsConfig.soft.map(buildSkill),
+    languages: skillsConfig.languages as LanguageSkill[],
+    certifications: skillsConfig.certifications,
+  };
+}
 
 export default function Skills() {
   const { t } = useTranslation();
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const skillsData = useSkillsWithTranslation();
 
   const [selectedSkill, setSelectedSkill] = useState<SkillType | null>(null);
   const [selectedColor, setSelectedColor] = useState('#C4A77D');
@@ -26,6 +53,20 @@ export default function Skills() {
   const handleClosePanel = () => {
     setIsPanelOpen(false);
     setTimeout(() => setSelectedSkill(null), 300);
+  };
+
+  const handleNavigateToProject = (projectId: string) => {
+    handleClosePanel();
+    setTimeout(() => {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        const card = document.querySelector(`[data-project-id="${projectId}"]`);
+        if (card) {
+          card.classList.add('highlight-pulse');
+          setTimeout(() => card.classList.remove('highlight-pulse'), 2000);
+        }
+      }, 500);
+    }, 300);
   };
 
   const containerVariants = {
@@ -61,12 +102,12 @@ export default function Skills() {
             <div className="skills-orbs">
               {skillsData.technical.map((skill, index) => (
                 <SkillOrb
-                  key={skill.name}
+                  key={skill.id}
                   skill={skill}
                   color={skillCategories[0].color}
                   index={index}
                   onClick={() => handleSkillClick(skill, skillCategories[0].color)}
-                  isActive={selectedSkill?.name === skill.name}
+                  isActive={selectedSkill && 'id' in selectedSkill && selectedSkill.id === skill.id}
                 />
               ))}
             </div>
@@ -78,12 +119,12 @@ export default function Skills() {
             <div className="skills-orbs">
               {skillsData.soft.map((skill, index) => (
                 <SkillOrb
-                  key={skill.name}
+                  key={skill.id}
                   skill={skill}
                   color={skillCategories[1].color}
                   index={index + skillsData.technical.length}
                   onClick={() => handleSkillClick(skill, skillCategories[1].color)}
-                  isActive={selectedSkill?.name === skill.name}
+                  isActive={selectedSkill && 'id' in selectedSkill && selectedSkill.id === skill.id}
                 />
               ))}
             </div>
@@ -136,6 +177,7 @@ export default function Skills() {
           isOpen={isPanelOpen}
           onClose={handleClosePanel}
           color={selectedColor}
+          onNavigateToProject={handleNavigateToProject}
         />
       </div>
     </section>

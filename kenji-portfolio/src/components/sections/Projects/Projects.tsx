@@ -51,6 +51,27 @@ export default function Projects() {
       period: t('projects.items.bwsc23.period'),
       description: t('projects.items.bwsc23.description'),
       tags: ['DX', 'Team Leadership', 'World 8th'],
+      caseStudy: {
+        overview: t('projects.items.bwsc23.caseStudy.overview'),
+        challenge: {
+          title: t('projects.items.bwsc23.caseStudy.challenge.title'),
+          description: t('projects.items.bwsc23.caseStudy.challenge.description'),
+          metrics: [],
+        },
+        approach: {
+          title: t('projects.items.bwsc23.caseStudy.approach.title'),
+          steps: t('projects.items.bwsc23.caseStudy.approach.steps', { returnObjects: true }) as string[],
+        },
+        solution: {
+          title: '',
+          technologies: [],
+          features: [],
+        },
+        results: {
+          title: t('projects.items.bwsc23.caseStudy.results.title'),
+          metrics: t('projects.items.bwsc23.caseStudy.results.metrics', { returnObjects: true }) as Array<{ label: string; value: string }>,
+        },
+      },
     },
     {
       id: 'automation',
@@ -59,6 +80,27 @@ export default function Projects() {
       period: t('projects.items.automation.period'),
       description: t('projects.items.automation.description'),
       tags: ['Automation', 'AI', '-1600h/year'],
+      caseStudy: {
+        overview: t('projects.items.automation.caseStudy.overview'),
+        challenge: {
+          title: t('projects.items.automation.caseStudy.challenge.title'),
+          description: t('projects.items.automation.caseStudy.challenge.description'),
+          metrics: [],
+        },
+        approach: {
+          title: t('projects.items.automation.caseStudy.approach.title'),
+          steps: t('projects.items.automation.caseStudy.approach.steps', { returnObjects: true }) as string[],
+        },
+        solution: {
+          title: '',
+          technologies: [],
+          features: [],
+        },
+        results: {
+          title: t('projects.items.automation.caseStudy.results.title'),
+          metrics: t('projects.items.automation.caseStudy.results.metrics', { returnObjects: true }) as Array<{ label: string; value: string }>,
+        },
+      },
     },
   ];
 
@@ -118,6 +160,7 @@ export default function Projects() {
           {projects.map((project) => (
             <motion.div
               key={project.id}
+              data-project-id={project.id}
               className={`project-card spotlight-container ${project.featured ? 'project-featured' : ''} ${project.caseStudy ? 'has-case-study' : ''}`}
               variants={cardVariants}
               whileHover={{

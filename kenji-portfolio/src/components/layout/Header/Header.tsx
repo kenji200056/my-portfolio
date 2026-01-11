@@ -4,12 +4,10 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const navItems = [
-  { key: 'about', href: '#about', number: '01' },
+  { key: 'story', href: '#story', number: '01' },
   { key: 'experience', href: '#experience', number: '02' },
-  { key: 'projects', href: '#projects', number: '03' },
-  { key: 'education', href: '#education', number: '04' },
-  { key: 'skills', href: '#skills', number: '05' },
-  { key: 'contact', href: '#contact', number: '06' },
+  { key: 'works', href: '#works', number: '03' },
+  { key: 'contact', href: '#contact', number: '04' },
 ];
 
 export default function Header() {

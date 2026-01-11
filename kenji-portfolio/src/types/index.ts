@@ -60,18 +60,33 @@ export interface Testimonial {
 }
 
 // Skill types
+export interface RelatedProject {
+  id: string;           // プロジェクトID (bwsc25, bwsc23, automation)
+  contribution: string; // このスキルがどう貢献したか
+}
+
 export interface Skill {
+  id: string;
   name: string;
   level: number;
   icon?: string;
   description?: string;
   achievements?: string[];
+  relatedProjects?: RelatedProject[];
 }
 
 export interface LanguageSkill {
   name: string;
   level: number;
   badge: string;
+}
+
+export interface SkillConfig {
+  id: string;
+  translationKey: string;
+  level: number;
+  icon?: string;
+  relatedProjectIds?: string[];
 }
 
 export interface SkillsData {

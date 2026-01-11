@@ -4,60 +4,80 @@
     "description": "Product Manager e Ingeniero impulsando resultados de negocio a través de IA y Transformación Digital"
   },
   "nav": {
-    "about": "Sobre mí",
+    "story": "Historia",
     "experience": "Experiencia",
-    "projects": "Proyectos",
-    "skills": "Habilidades",
-    "education": "Educación",
+    "works": "Trabajos",
     "contact": "Contacto"
   },
   "hero": {
-    "subtitle": "IA・DX・Desarrollo de Productos",
-    "title": "KENJI",
-    "familyName": "GUTIERREZ JIMENEZ",
-    "description": "Impulsando la Transformación Digital con IA, Gestión de Productos y Excelencia Operacional",
-    "cta": "Ver Proyectos",
-    "scroll": "Scroll"
-  },
-  "about": {
-    "number": "01",
-    "title": "Sobre mí",
-    "lead": "Conectando ingeniería, gestión de productos e implementación de IA, me especializo en <highlight>vincular la tecnología con los resultados de negocio</highlight>.",
-    "description1": "Con formación en ingeniería mecánica y experiencia práctica en análisis de datos, IA y automatización, destaco en estructurar desafíos complejos e impulsar soluciones.",
-    "description2": "Mis fortalezas incluyen experiencia de liderazgo gestionando proyectos de 90 personas y capacidades de ejecución demostradas liderando la implementación de IA en 11 ubicaciones.",
+    "badge": "IA × DATA × ENGINEERING",
+    "title": "Conectando",
+    "titleHighlight": "Tecnología",
+    "titleEnd": "con Negocios",
+    "titleLine1": "IA",
+    "titleLine2": "× DATA",
+    "titleLine3": "× IMPACTO",
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "role": "Especialista en IA y Datos",
+    "description": "Impulsando resultados de negocio medibles con IA y datos",
+    "cta": "Ver Trabajos",
+    "scroll": "Scroll",
     "stats": {
       "hoursReduced": {
         "value": "1600h+",
-        "label": "Horas Ahorradas/Año"
-      },
-      "teamSize": {
-        "value": "90",
-        "label": "Tamaño del Equipo"
+        "label": "Ahorradas/Año"
       },
       "worldRank": {
-        "value": "8°",
-        "label": "Ranking Mundial BWSC"
+        "value": "8° Mundial",
+        "label": "BWSC"
       },
       "aiDeployment": {
-        "value": "11",
-        "label": "Sitios de Implementación IA"
+        "value": "11 Sitios",
+        "label": "IA Desplegada"
       }
     }
   },
-  "expertise": {
-    "heading": "Lo que hago",
-    "items": {
-      "ai": {
-        "title": "Promoción de IA y DX",
-        "description": "Implementación de eficiencia operacional a través de IA generativa, construcción de infraestructura de análisis de datos y planificación/ejecución de estrategias de adopción de IA en toda la organización."
+  "story": {
+    "number": "01",
+    "title": "Historia",
+    "subtitle": "Desafío Auto Solar",
+    "intro": "Descubrí el Proyecto de Auto Solar en mi primer año, y comenzó mi viaje hacia el escenario más grande del mundo.",
+    "chapters": {
+      "bwsc23": {
+        "year": "2022-2023",
+        "title": "Desafío como Líder de DX",
+        "role": "Líder de Promoción DX",
+        "description": "Lideré iniciativas de DX en un equipo de 90 miembros. Construí base de conocimiento con Notion/Slack y automaticé flujos de trabajo, reduciendo el tiempo de desarrollo de 12 a 10 meses.",
+        "achievements": [
+          "8° Lugar Mundial",
+          "2 Meses de Desarrollo Ahorrados",
+          "4 Nuevos Patrocinadores",
+          "¥14M Reducción de Costos"
+        ]
       },
-      "product": {
-        "title": "Desarrollo de Productos",
-        "description": "Desde investigación de usuarios hasta creación de PRD y colaboración con equipos de desarrollo, impulso productos desde la concepción hasta el crecimiento."
+      "bwsc25": {
+        "year": "2024-2025",
+        "title": "Convirtiéndome en Project Manager",
+        "role": "PM / Estratega de Carrera",
+        "description": "Como PM supervisando 90 miembros, construí sistema de predicción con ML. Lideré logística compleja Japón-Australia y operaciones de viaje.",
+        "achievements": [
+          "Lideré Equipo de 90 Miembros",
+          "95%+ Precisión de Predicción",
+          "Establecí Proceso de Decisión No Personalizado"
+        ]
+      }
+    },
+    "education": {
+      "title": "Educación",
+      "master": {
+        "period": "2024 - 2026",
+        "school": "Escuela de Posgrado Universidad Kogakuin",
+        "degree": "Maestría en Ingeniería Mecánica"
       },
-      "automation": {
-        "title": "Automatización de Negocios",
-        "description": "Mejora significativa de la productividad del equipo a través de la automatización de tareas repetitivas y optimización de flujos de trabajo."
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "Universidad Kogakuin",
+        "degree": "Licenciatura en Ingeniería de Sistemas Mecánicos"
       }
     }
   },
@@ -90,11 +110,19 @@
       }
     }
   },
-  "projects": {
+  "works": {
     "number": "03",
-    "title": "Proyectos",
-    "subtitle": "Trabajos Seleccionados 2022-2025",
-    "viewCaseStudy": "Ver Detalles",
+    "title": "Trabajos",
+    "tabs": {
+      "projects": "Proyectos",
+      "skills": "Habilidades"
+    },
+    "projects": {
+      "subtitle": "Trabajos Seleccionados 2022-2025",
+      "viewCaseStudy": "Ver Detalles"
+    }
+  },
+  "projects": {
     "items": {
       "bwsc25": {
         "category": "Liderazgo",
@@ -131,61 +159,166 @@
         "title": "Carrera de Autos Solares BWSC23",
         "period": "2022.01 - 2024.08",
         "description": "En la gestión de un equipo de 90 personas, acorté el período de desarrollo de 12 a 10 meses a través de la optimización operacional impulsada por DX. Logré el 8° lugar en el Campeonato Mundial.",
-        "tags": ["DX", "Liderazgo de Equipo", "8° Mundial"]
+        "tags": ["DX", "Liderazgo de Equipo", "8° Mundial"],
+        "caseStudy": {
+          "overview": "Competí en la carrera de autos solares más importante del mundo 'Bridgestone World Solar Challenge' como representante de Japón. Como líder de promoción DX, impulsé la reforma organizacional y el desarrollo técnico, logrando el 8° lugar mundial.",
+          "challenge": {
+            "title": "Desafío",
+            "description": "En un equipo estudiantil de 90 personas, los procesos de desarrollo personalizados y la comunicación ineficiente eran problemas importantes. Necesitábamos competir en el campeonato mundial con presupuesto y tiempo limitados."
+          },
+          "approach": {
+            "title": "Enfoque",
+            "steps": [
+              "Construcción de base de conocimiento usando Notion",
+              "Automatización de tareas rutinarias con workflows de Slack",
+              "Introducción de revisiones de sprint semanales",
+              "Implementación de sistema de visualización de tareas interdepartamental"
+            ]
+          },
+          "results": {
+            "title": "Resultados",
+            "metrics": [
+              { "label": "Tiempo de Desarrollo Ahorrado", "value": "2 meses" },
+              { "label": "Ranking Mundial", "value": "8°" },
+              { "label": "Nuevos Patrocinadores", "value": "4 empresas" },
+              { "label": "Reducción de Costos", "value": "¥14M" }
+            ]
+          }
+        }
       },
       "automation": {
         "category": "IA / Automatización",
         "title": "Herramientas de Automatización de Negocios",
         "period": "2025",
         "description": "Desarrollé múltiples herramientas internas incluyendo auto-generación de diapositivas y automatización de correos de ventas. Logré más de 1600 horas de mejora de eficiencia operacional anual.",
-        "tags": ["Automatización", "IA", "-1600h/año"]
+        "tags": ["Automatización", "IA", "-1600h/año"],
+        "caseStudy": {
+          "overview": "Durante mi pasantía en AnyMind Group, planifiqué, desarrollé y operé múltiples herramientas de automatización empresarial. Contribuí a la mejora de productividad de toda la organización usando tecnología de IA.",
+          "challenge": {
+            "title": "Desafío",
+            "description": "Los equipos de ventas y marketing dedicaban tiempo significativo a tareas repetitivas. La creación de diapositivas y la redacción de correos de ventas estaban particularmente personalizadas con calidad inconsistente."
+          },
+          "approach": {
+            "title": "Enfoque",
+            "steps": [
+              "Entrevistas de flujo de trabajo y análisis de cuellos de botella",
+              "Diseño de sistema de auto-generación de diapositivas usando GPT-4 API",
+              "Combinación de plantillas de correos de ventas con generación de IA",
+              "Mejora continua basada en retroalimentación de usuarios"
+            ]
+          },
+          "results": {
+            "title": "Resultados",
+            "metrics": [
+              { "label": "Creación de Diapositivas Ahorrada", "value": "-200h/año" },
+              { "label": "Correos de Ventas Ahorrados", "value": "-600h/año" },
+              { "label": "Sitios de Implementación de IA", "value": "11 ubicaciones" },
+              { "label": "Total Anual Ahorrado", "value": "1600h+" }
+            ]
+          }
+        }
       }
     }
   },
   "skills": {
-    "number": "05",
-    "title": "Habilidades",
     "categories": {
-      "technical": {
-        "title": "Habilidades Técnicas",
-        "items": ["Python", "SQL", "Machine Learning", "Análisis de Datos", "React", "TypeScript"]
-      },
-      "management": {
-        "title": "Gestión",
-        "items": ["Gestión de Proyectos", "Gestión de Productos", "Liderazgo de Equipos", "Desarrollo Ágil"]
-      },
-      "languages": {
-        "title": "Idiomas",
-        "items": ["Japonés (Nativo)", "Español (Nativo)", "Inglés (Negocios)"]
-      },
-      "certifications": {
-        "title": "Certificaciones",
-        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
-      }
-    }
-  },
-  "education": {
-    "number": "04",
-    "title": "Educación",
+      "technical": { "title": "Habilidades Técnicas" },
+      "management": { "title": "Gestión" },
+      "languages": { "title": "Idiomas" },
+      "certifications": { "title": "Certificaciones" }
+    },
     "items": {
-      "master": {
-        "period": "2024 - 2026",
-        "school": "Escuela de Posgrado Universidad Kogakuin",
-        "degree": "Maestría en Ingeniería Mecánica",
-        "description": "Investigación sobre predicción de datos de series temporales y detección de anomalías en el Laboratorio de Control Automático."
+      "aiMl": {
+        "name": "IA y Machine Learning",
+        "description": "Integración GPT-4/Claude, construcción de modelos de predicción, NLP",
+        "achievements": ["Implementación de IA en 11 ubicaciones de Asia", "1600+ horas ahorradas anualmente"],
+        "contributions": {
+          "bwsc25": "Construcción de modelo de predicción de generación/consumo de energía",
+          "automation": "Desarrollo de herramientas de automatización usando GPT-4 API"
+        }
       },
-      "bachelor": {
-        "period": "2019 - 2024",
-        "school": "Universidad Kogakuin",
-        "degree": "Licenciatura en Ingeniería de Sistemas Mecánicos",
-        "gpa": "GPA: 3.33 / 4.00",
-        "description": "Especialización en Ingeniería Mecánica, demostré liderazgo en el Proyecto de Auto Solar."
+      "dataAnalysis": {
+        "name": "Análisis de Datos",
+        "description": "Python, BigQuery, análisis estadístico, construcción de dashboards",
+        "achievements": ["Certificación Google Data Analytics", "Optimización de estrategia de carrera"],
+        "contributions": {
+          "bwsc25": "Construcción de sistema de recolección y análisis de datos en tiempo real",
+          "bwsc23": "Establecimiento de infraestructura de análisis de rendimiento del equipo"
+        }
+      },
+      "productDev": {
+        "name": "Desarrollo de Productos",
+        "description": "Creación de PRD, investigación de usuarios, desarrollo ágil",
+        "achievements": ["Lideré múltiples productos B2B"],
+        "contributions": {
+          "automation": "Planificación y desarrollo del producto de IA 'AnyAI'"
+        }
+      },
+      "webDev": {
+        "name": "Desarrollo Web",
+        "description": "React, TypeScript, Three.js, Framer Motion",
+        "achievements": ["Desarrollo de herramientas internas", "Construcción de sitio de portafolio"],
+        "contributions": {}
+      },
+      "controlEng": {
+        "name": "Ingeniería de Control",
+        "description": "Simulink, predicción de series temporales, detección de anomalías",
+        "achievements": ["Certificación Control Design", "Optimización de gestión de energía"],
+        "contributions": {
+          "bwsc25": "Optimización del sistema de control del vehículo",
+          "bwsc23": "Diseño del Sistema de Gestión de Energía"
+        }
+      },
+      "leadership": {
+        "name": "Liderazgo",
+        "description": "Gestión de equipo de 90 personas, toma de decisiones, diseño organizacional",
+        "achievements": ["Lideré equipo de 90 personas", "Logré 8° lugar mundial"],
+        "contributions": {
+          "bwsc25": "Lideré el equipo como Gerente de Proyecto",
+          "bwsc23": "Impulsé la reforma organizacional como Líder de DX"
+        }
+      },
+      "projectMgmt": {
+        "name": "Gestión de Proyectos",
+        "description": "Operaciones de sprint, gestión de riesgos, coordinación de stakeholders",
+        "achievements": ["Acorté desarrollo en 2 meses", "Gestión de logística compleja"],
+        "contributions": {
+          "bwsc25": "Operaciones de importación/exportación y viaje Japón-Australia",
+          "automation": "Lideré proyecto de implementación de IA"
+        }
+      },
+      "fundraising": {
+        "name": "Ventas y Recaudación",
+        "description": "Adquisición de patrocinadores, propuestas, negociación",
+        "achievements": ["Adquirí 4 nuevos patrocinadores", "Recaudé ¥7M en fondos"],
+        "contributions": {
+          "bwsc23": "Reestructuré estrategia de adquisición de patrocinadores"
+        }
       }
+    },
+    "detail": {
+      "relatedProjects": "Proyectos Relacionados",
+      "howAcquired": "Cómo lo Adquirí",
+      "viewProject": "Ver Proyecto"
     }
   },
   "contact": {
+    "number": "03",
+    "title": "Contacto",
     "heading": "Conectemos",
+    "headingLine1": "Creemos",
+    "headingLine2": " Impacto Juntos",
     "subheading": "No dudes en contactarme sobre nuevos proyectos u oportunidades de colaboración.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar. Por favor intenta de nuevo."
+    },
+    "alternate": "o",
     "cta": "Contactar en LinkedIn"
   },
   "footer": {

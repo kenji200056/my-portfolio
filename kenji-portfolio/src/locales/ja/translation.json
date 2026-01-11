@@ -4,60 +4,80 @@
     "description": "AIとDXで事業成果を創出するプロダクトマネージャー・エンジニア"
   },
   "nav": {
-    "about": "About",
+    "story": "Story",
     "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
-    "education": "Education",
+    "works": "Works",
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "AI・DX・プロダクト開発",
-    "title": "KENJI",
-    "familyName": "GUTIERREZ JIMENEZ",
-    "description": "AIを活用したデジタルトランスフォーメーションを推進し、プロダクトマネジメントとオペレーション最適化で事業成果を創出します",
-    "cta": "プロジェクトを見る",
-    "scroll": "Scroll"
-  },
-  "about": {
-    "number": "01",
-    "title": "About",
-    "lead": "エンジニアリングからプロダクト、プロジェクトマネジメント、AI活用まで幅広い領域を横断し、<highlight>技術を事業成果につなげる</highlight>アプローチを得意としています。",
-    "description1": "機械工学のバックグラウンドを持ち、データ分析・AI・業務自動化の実践経験を通じて、複雑な課題を構造化し解決へ導きます。",
-    "description2": "90名規模のプロジェクトリーダーとして培ったマネジメント力と、11拠点へのAI展開を主導した推進力を強みとしています。",
+    "badge": "AI × DATA × ENGINEERING",
+    "title": "技術を",
+    "titleHighlight": "事業成果に",
+    "titleEnd": "つなげる",
+    "titleLine1": "AI",
+    "titleLine2": "× DATA",
+    "titleLine3": "× IMPACT",
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "role": "AI & Data Specialist",
+    "description": "AIとデータで、測定可能なビジネス成果を創出する",
+    "cta": "Works を見る",
+    "scroll": "Scroll",
     "stats": {
       "hoursReduced": {
         "value": "1600h+",
-        "label": "年間削減時間"
-      },
-      "teamSize": {
-        "value": "90名",
-        "label": "チーム規模"
+        "label": "年間削減"
       },
       "worldRank": {
-        "value": "8位",
-        "label": "BWSC世界大会"
+        "value": "世界8位",
+        "label": "BWSC"
       },
       "aiDeployment": {
         "value": "11拠点",
-        "label": "AI展開規模"
+        "label": "AI展開"
       }
     }
   },
-  "expertise": {
-    "heading": "What I Do",
-    "items": {
-      "ai": {
-        "title": "AI活用・DX推進",
-        "description": "生成AIを活用した業務効率化、データ分析基盤の構築、組織全体へのAI導入戦略の立案・実行を担います。"
+  "story": {
+    "number": "01",
+    "title": "Story",
+    "subtitle": "Solar Car Challenge",
+    "intro": "大学1年生でソーラーカープロジェクトに出会い、世界最高峰の舞台への挑戦が始まりました。",
+    "chapters": {
+      "bwsc23": {
+        "year": "2022-2023",
+        "title": "DX推進リーダーとしての挑戦",
+        "role": "DX推進リーダー",
+        "description": "90名規模のチームでDX推進を担当。Notion・Slackを活用したナレッジベース構築とワークフロー自動化により、開発期間を12ヶ月から10ヶ月に短縮。",
+        "achievements": [
+          "世界8位入賞",
+          "開発期間2ヶ月短縮",
+          "4社から新規スポンサー獲得",
+          "1400万円のコスト削減"
+        ]
       },
-      "product": {
-        "title": "プロダクト開発",
-        "description": "ユーザーリサーチからPRD策定、開発チームとの協働まで、プロダクトの企画から成長までを一貫して推進します。"
+      "bwsc25": {
+        "year": "2024-2025",
+        "title": "プロジェクトマネージャーへ",
+        "role": "PM / レースストラテジスト",
+        "description": "90名のチームを統括するPMとして、機械学習を活用した予測システムを構築。日豪間の複雑なロジスティクスと渡航オペレーションをリード。",
+        "achievements": [
+          "90名規模のチーム統括",
+          "予測精度95%以上達成",
+          "非属人的な意思決定プロセス確立"
+        ]
+      }
+    },
+    "education": {
+      "title": "Education",
+      "master": {
+        "period": "2024 - 2026",
+        "school": "工学院大学大学院",
+        "degree": "工学研究科 機械工学専攻 修士課程"
       },
-      "automation": {
-        "title": "業務自動化",
-        "description": "繰り返し作業の自動化、ワークフロー最適化により、チームの生産性を大幅に向上させます。"
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "工学院大学",
+        "degree": "工学部 機械システム工学科"
       }
     }
   },
@@ -90,11 +110,19 @@
       }
     }
   },
-  "projects": {
+  "works": {
     "number": "03",
-    "title": "Projects",
-    "subtitle": "Selected Works 2022-2025",
-    "viewCaseStudy": "詳細を見る",
+    "title": "Works",
+    "tabs": {
+      "projects": "Projects",
+      "skills": "Skills"
+    },
+    "projects": {
+      "subtitle": "Selected Works 2022-2025",
+      "viewCaseStudy": "詳細を見る"
+    }
+  },
+  "projects": {
     "items": {
       "bwsc25": {
         "category": "Leadership",
@@ -131,62 +159,167 @@
         "title": "BWSC23 ソーラーカーレース",
         "period": "2022.01 - 2024.08",
         "description": "90名規模のチーム運営において、DX推進によるオペレーションの最適化で開発期間を12ヶ月から10ヶ月に短縮。世界大会8位入賞を達成。",
-        "tags": ["DX", "Team Leadership", "World 8th"]
+        "tags": ["DX", "Team Leadership", "World 8th"],
+        "caseStudy": {
+          "overview": "世界最高峰のソーラーカーレース「Bridgestone World Solar Challenge」に日本代表として参戦。DX推進リーダーとして組織改革と技術開発を推進し、世界8位入賞を達成しました。",
+          "challenge": {
+            "title": "課題",
+            "description": "90名規模の学生チームで、属人化した開発プロセスと非効率なコミュニケーションが課題でした。限られた予算と時間の中で世界大会出場を目指す必要がありました。"
+          },
+          "approach": {
+            "title": "アプローチ",
+            "steps": [
+              "Notionを活用したナレッジベースの構築",
+              "Slackワークフローによる定型業務の自動化",
+              "週次スプリントレビューの導入",
+              "部門横断的なタスク可視化システムの実装"
+            ]
+          },
+          "results": {
+            "title": "成果",
+            "metrics": [
+              { "label": "開発期間短縮", "value": "2ヶ月" },
+              { "label": "世界ランキング", "value": "8位" },
+              { "label": "新規スポンサー", "value": "4社" },
+              { "label": "コスト削減", "value": "1400万円" }
+            ]
+          }
+        }
       },
       "automation": {
         "category": "AI / Automation",
         "title": "業務自動化ツール開発",
         "period": "2025",
         "description": "スライド自動生成システム、営業メール自動化など、複数の内製ツールを開発。年間1600時間以上の業務効率化を実現。",
-        "tags": ["Automation", "AI", "-1600h/year"]
+        "tags": ["Automation", "AI", "-1600h/year"],
+        "caseStudy": {
+          "overview": "AnyMind Groupでのインターンシップにおいて、複数の業務自動化ツールを企画・開発・運用しました。AI技術を活用し、組織全体の生産性向上に貢献しました。",
+          "challenge": {
+            "title": "課題",
+            "description": "営業チームとマーケティングチームで繰り返し発生する定型業務に多くの時間が費やされていました。特にスライド作成と営業メール作成は属人化しており、品質にばらつきがありました。"
+          },
+          "approach": {
+            "title": "アプローチ",
+            "steps": [
+              "業務フローのヒアリングとボトルネック分析",
+              "GPT-4 APIを活用したスライド自動生成システムの設計",
+              "営業メールテンプレートとAI生成の組み合わせ",
+              "ユーザーフィードバックに基づく継続的改善"
+            ]
+          },
+          "results": {
+            "title": "成果",
+            "metrics": [
+              { "label": "スライド作成削減", "value": "-200h/年" },
+              { "label": "営業メール削減", "value": "-600h/年" },
+              { "label": "AI導入拠点", "value": "11拠点" },
+              { "label": "年間合計削減", "value": "1600h+" }
+            ]
+          }
+        }
       }
     }
   },
   "skills": {
-    "number": "05",
-    "title": "Skills",
     "categories": {
-      "technical": {
-        "title": "Technical Skills",
-        "items": ["Python", "SQL", "機械学習", "データ分析", "React", "TypeScript"]
-      },
-      "management": {
-        "title": "Management",
-        "items": ["プロジェクトマネジメント", "プロダクトマネジメント", "チームリーダーシップ", "アジャイル開発"]
-      },
-      "languages": {
-        "title": "Languages",
-        "items": ["日本語（ネイティブ）", "スペイン語（ネイティブ）", "英語（ビジネスレベル）"]
-      },
-      "certifications": {
-        "title": "Certifications",
-        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
-      }
-    }
-  },
-  "education": {
-    "number": "04",
-    "title": "Education",
+      "technical": { "title": "Technical Skills" },
+      "management": { "title": "Management" },
+      "languages": { "title": "Languages" },
+      "certifications": { "title": "Certifications" }
+    },
     "items": {
-      "master": {
-        "period": "2024 - 2026",
-        "school": "工学院大学大学院",
-        "degree": "工学研究科 機械工学専攻 修士課程",
-        "description": "自動制御研究室にて時系列データ予測・異常検知の研究に従事。"
+      "aiMl": {
+        "name": "AI・機械学習",
+        "description": "GPT-4/Claude統合、予測モデル構築、自然言語処理",
+        "achievements": ["アジア11拠点へのAI展開", "年間1600時間の業務削減"],
+        "contributions": {
+          "bwsc25": "発電量・消費量予測モデルの構築",
+          "automation": "GPT-4 APIを活用した自動化ツール開発"
+        }
       },
-      "bachelor": {
-        "period": "2019 - 2024",
-        "school": "工学院大学",
-        "degree": "工学部 機械システム工学科",
-        "gpa": "GPA: 3.33 / 4.00",
-        "description": "機械工学を専攻し、ソーラーカープロジェクトでリーダーシップを発揮。"
+      "dataAnalysis": {
+        "name": "データ分析",
+        "description": "Python, BigQuery, 統計分析, ダッシュボード構築",
+        "achievements": ["Google Data Analytics認定取得", "レース戦略最適化"],
+        "contributions": {
+          "bwsc25": "リアルタイムデータ収集・分析システム構築",
+          "bwsc23": "チームパフォーマンス分析基盤の構築"
+        }
+      },
+      "productDev": {
+        "name": "プロダクト開発",
+        "description": "PRD策定, ユーザーリサーチ, アジャイル開発",
+        "achievements": ["複数のB2Bプロダクトをリード"],
+        "contributions": {
+          "automation": "AIプロダクト「AnyAI」の企画・開発"
+        }
+      },
+      "webDev": {
+        "name": "Web開発",
+        "description": "React, TypeScript, Three.js, Framer Motion",
+        "achievements": ["自社ツール開発", "ポートフォリオサイト構築"],
+        "contributions": {}
+      },
+      "controlEng": {
+        "name": "制御工学",
+        "description": "Simulink, 時系列予測, 異常検知",
+        "achievements": ["Control Design認定取得", "エネルギー管理最適化"],
+        "contributions": {
+          "bwsc25": "車両制御システムの最適化",
+          "bwsc23": "Energy Management Systemの設計"
+        }
+      },
+      "leadership": {
+        "name": "リーダーシップ",
+        "description": "90名規模のチーム統括, 意思決定, 組織設計",
+        "achievements": ["90名規模チームを統括", "世界大会8位入賞"],
+        "contributions": {
+          "bwsc25": "プロジェクトマネージャーとしてチームを牽引",
+          "bwsc23": "DX推進リーダーとして組織改革を主導"
+        }
+      },
+      "projectMgmt": {
+        "name": "プロジェクト管理",
+        "description": "スプリント運用, リスク管理, ステークホルダー調整",
+        "achievements": ["開発期間を2ヶ月短縮", "複雑なロジスティクス統括"],
+        "contributions": {
+          "bwsc25": "日豪間の輸出入・渡航オペレーション管理",
+          "automation": "AI導入プロジェクトの推進"
+        }
+      },
+      "fundraising": {
+        "name": "営業・資金調達",
+        "description": "スポンサー獲得, 提案活動, 交渉",
+        "achievements": ["4社から新規スポンサー獲得", "700万円の資金調達"],
+        "contributions": {
+          "bwsc23": "スポンサー獲得戦略の再構築"
+        }
       }
+    },
+    "detail": {
+      "relatedProjects": "関連プロジェクト",
+      "howAcquired": "習得経緯",
+      "viewProject": "プロジェクトを見る"
     }
   },
   "contact": {
+    "number": "03",
+    "title": "Contact",
     "heading": "Let's Connect",
+    "headingLine1": "一緒に",
+    "headingLine2": "インパクトを創る",
     "subheading": "新しいプロジェクトやコラボレーションの機会について、お気軽にご連絡ください。",
-    "cta": "Contact on LinkedIn"
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "message": "メッセージ",
+      "submit": "送信",
+      "sending": "送信中...",
+      "success": "送信完了しました！",
+      "error": "送信に失敗しました。もう一度お試しください。"
+    },
+    "alternate": "または",
+    "cta": "LinkedInで連絡"
   },
   "footer": {
     "name": "KENJI GUTIERREZ JIMENEZ",

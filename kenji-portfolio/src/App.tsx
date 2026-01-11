@@ -1,11 +1,8 @@
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
-import About from './components/About';
-import Expertise from './components/Expertise';
+import Story from './components/sections/Story';
 import Experience from './components/Experience';
-import Projects from './components/sections/Projects';
-import Education from './components/Education';
-import Skills from './components/sections/Skills';
+import Works from './components/sections/Works';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -15,12 +12,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Expertise />
+        <Story />
         <Experience />
-        <Projects />
-        <Education />
-        <Skills />
+        <Works />
         <Contact />
       </main>
       <Footer />

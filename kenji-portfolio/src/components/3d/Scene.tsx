@@ -1,13 +1,22 @@
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Environment, Preload } from '@react-three/drei';
 import * as THREE from 'three';
 
+// PKSHA Color Palette
+const COLORS = {
+  orange: '#EB805E',
+  cyan: '#33B6DE',
+  orangeLight: '#F4A58A',
+  cyanLight: '#66C9E8',
+};
+
 // Floating Icosahedron with wireframe
-function FloatingIcosahedron({ position, scale = 1, speed = 1 }: {
+function FloatingIcosahedron({ position, scale = 1, speed = 1, color = COLORS.orange }: {
   position: [number, number, number];
   scale?: number;
   speed?: number;
+  color?: string;
 }) {
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -23,7 +32,7 @@ function FloatingIcosahedron({ position, scale = 1, speed = 1 }: {
       <mesh ref={meshRef} position={position} scale={scale}>
         <icosahedronGeometry args={[1, 1]} />
         <meshBasicMaterial
-          color="#C4A77D"
+          color={color}
           wireframe
           transparent
           opacity={0.4}
@@ -34,9 +43,10 @@ function FloatingIcosahedron({ position, scale = 1, speed = 1 }: {
 }
 
 // Floating Torus
-function FloatingTorus({ position, scale = 1 }: {
+function FloatingTorus({ position, scale = 1, color = COLORS.cyan }: {
   position: [number, number, number];
   scale?: number;
+  color?: string;
 }) {
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -52,7 +62,7 @@ function FloatingTorus({ position, scale = 1 }: {
       <mesh ref={meshRef} position={position} scale={scale}>
         <torusGeometry args={[1, 0.3, 16, 32]} />
         <meshBasicMaterial
-          color="#D4C4A8"
+          color={color}
           wireframe
           transparent
           opacity={0.3}
@@ -63,9 +73,10 @@ function FloatingTorus({ position, scale = 1 }: {
 }
 
 // Floating Octahedron
-function FloatingOctahedron({ position, scale = 1 }: {
+function FloatingOctahedron({ position, scale = 1, color = COLORS.orangeLight }: {
   position: [number, number, number];
   scale?: number;
+  color?: string;
 }) {
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -80,7 +91,7 @@ function FloatingOctahedron({ position, scale = 1 }: {
       <mesh ref={meshRef} position={position} scale={scale}>
         <octahedronGeometry args={[1]} />
         <meshBasicMaterial
-          color="#A68B5B"
+          color={color}
           wireframe
           transparent
           opacity={0.35}
@@ -90,20 +101,38 @@ function FloatingOctahedron({ position, scale = 1 }: {
   );
 }
 
-// Particle Field
-function ParticleField({ count = 100 }: { count?: number }) {
+// Gradient Particle Field - PKSHA Style
+function ParticleField({ count = 150 }: { count?: number }) {
   const points = useRef<THREE.Points>(null);
 
-  const positions = new Float32Array(count * 3);
-  for (let i = 0; i < count; i++) {
-    positions[i * 3] = (Math.random() - 0.5) * 20;
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
-  }
+  const { positions, colors } = useMemo(() => {
+    const positionsArray = new Float32Array(count * 3);
+    const colorsArray = new Float32Array(count * 3);
+
+    const colorOrange = new THREE.Color(COLORS.orange);
+    const colorCyan = new THREE.Color(COLORS.cyan);
+
+    for (let i = 0; i < count; i++) {
+      // Position
+      positionsArray[i * 3] = (Math.random() - 0.5) * 25;
+      positionsArray[i * 3 + 1] = (Math.random() - 0.5) * 25;
+      positionsArray[i * 3 + 2] = (Math.random() - 0.5) * 15;
+
+      // Gradient color based on position (left=orange, right=cyan)
+      const t = (positionsArray[i * 3] + 12.5) / 25; // Normalize x position to 0-1
+      const color = colorOrange.clone().lerp(colorCyan, t);
+      colorsArray[i * 3] = color.r;
+      colorsArray[i * 3 + 1] = color.g;
+      colorsArray[i * 3 + 2] = color.b;
+    }
+
+    return { positions: positionsArray, colors: colorsArray };
+  }, [count]);
 
   useFrame((state) => {
     if (points.current) {
       points.current.rotation.y = state.clock.elapsedTime * 0.02;
+      points.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.1) * 0.05;
     }
   });
 
@@ -116,12 +145,18 @@ function ParticleField({ count = 100 }: { count?: number }) {
           array={positions}
           itemSize={3}
         />
+        <bufferAttribute
+          attach="attributes-color"
+          count={count}
+          array={colors}
+          itemSize={3}
+        />
       </bufferGeometry>
       <pointsMaterial
-        size={0.03}
-        color="#C4A77D"
+        size={0.04}
+        vertexColors
         transparent
-        opacity={0.5}
+        opacity={0.6}
         sizeAttenuation
       />
     </points>
@@ -135,15 +170,20 @@ function SceneContent() {
       {/* Ambient light for subtle illumination */}
       <ambientLight intensity={0.5} />
 
-      {/* Floating Geometries */}
-      <FloatingIcosahedron position={[-3, 1, -2]} scale={1.2} speed={0.8} />
-      <FloatingIcosahedron position={[4, -1, -3]} scale={0.8} speed={1.2} />
-      <FloatingTorus position={[3, 2, -4]} scale={0.6} />
-      <FloatingOctahedron position={[-4, -2, -2]} scale={0.7} />
-      <FloatingOctahedron position={[2, -2, -5]} scale={0.5} />
+      {/* Floating Geometries - Orange accent */}
+      <FloatingIcosahedron position={[-3, 1, -2]} scale={1.2} speed={0.8} color={COLORS.orange} />
+      <FloatingIcosahedron position={[4, -1, -3]} scale={0.8} speed={1.2} color={COLORS.orangeLight} />
 
-      {/* Particle Field */}
-      <ParticleField count={80} />
+      {/* Floating Geometries - Cyan accent */}
+      <FloatingTorus position={[3, 2, -4]} scale={0.6} color={COLORS.cyan} />
+      <FloatingTorus position={[-4, 0, -5]} scale={0.5} color={COLORS.cyanLight} />
+
+      {/* Mixed colors for depth */}
+      <FloatingOctahedron position={[-4, -2, -2]} scale={0.7} color={COLORS.cyan} />
+      <FloatingOctahedron position={[2, -2, -5]} scale={0.5} color={COLORS.orange} />
+
+      {/* Gradient Particle Field */}
+      <ParticleField count={120} />
 
       {/* Environment for reflections */}
       <Environment preset="city" />
@@ -190,8 +230,8 @@ export function SceneLight() {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
-          <FloatingIcosahedron position={[-2, 0, -2]} scale={1} speed={0.5} />
-          <FloatingOctahedron position={[2, 0, -3]} scale={0.6} />
+          <FloatingIcosahedron position={[-2, 0, -2]} scale={1} speed={0.5} color={COLORS.orange} />
+          <FloatingOctahedron position={[2, 0, -3]} scale={0.6} color={COLORS.cyan} />
           <Preload all />
         </Suspense>
       </Canvas>

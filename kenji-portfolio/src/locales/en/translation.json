@@ -4,60 +4,80 @@
     "description": "Product Manager & Engineer driving business outcomes through AI and Digital Transformation"
   },
   "nav": {
-    "about": "About",
+    "story": "Story",
     "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
-    "education": "Education",
+    "works": "Works",
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "AI・DX・Product Development",
-    "title": "KENJI",
-    "familyName": "GUTIERREZ JIMENEZ",
-    "description": "Driving AI-enabled Digital Transformation, Product Management & Operational Excellence",
+    "badge": "AI × DATA × ENGINEERING",
+    "title": "Connecting",
+    "titleHighlight": "Technology",
+    "titleEnd": "to Business",
+    "titleLine1": "AI",
+    "titleLine2": "× DATA",
+    "titleLine3": "× IMPACT",
+    "name": "KENJI GUTIERREZ JIMENEZ",
+    "role": "AI & Data Specialist",
+    "description": "Driving AI-enabled Digital Transformation with measurable business outcomes",
     "cta": "View Works",
-    "scroll": "Scroll"
-  },
-  "about": {
-    "number": "01",
-    "title": "About",
-    "lead": "Bridging engineering, product management, and AI implementation, I specialize in <highlight>connecting technology to business outcomes</highlight>.",
-    "description1": "With a mechanical engineering background and hands-on experience in data analysis, AI, and automation, I excel at structuring complex challenges and driving solutions.",
-    "description2": "My strengths include leadership experience managing 90-person projects and the execution capabilities demonstrated by leading AI deployment across 11 locations.",
+    "scroll": "Scroll",
     "stats": {
       "hoursReduced": {
         "value": "1600h+",
-        "label": "Hours Saved/Year"
-      },
-      "teamSize": {
-        "value": "90",
-        "label": "Team Size"
+        "label": "Saved/Year"
       },
       "worldRank": {
-        "value": "8th",
-        "label": "BWSC World Ranking"
+        "value": "World 8th",
+        "label": "BWSC"
       },
       "aiDeployment": {
-        "value": "11",
-        "label": "AI Deployment Sites"
+        "value": "11 Sites",
+        "label": "AI Deploy"
       }
     }
   },
-  "expertise": {
-    "heading": "What I Do",
-    "items": {
-      "ai": {
-        "title": "AI & DX Promotion",
-        "description": "Implementing operational efficiency through generative AI, building data analytics infrastructure, and planning/executing organization-wide AI adoption strategies."
+  "story": {
+    "number": "01",
+    "title": "Story",
+    "subtitle": "Solar Car Challenge",
+    "intro": "I discovered the Solar Car Project in my freshman year, and my journey to the world's greatest stage began.",
+    "chapters": {
+      "bwsc23": {
+        "year": "2022-2023",
+        "title": "Challenge as DX Leader",
+        "role": "DX Promotion Leader",
+        "description": "Led DX initiatives in a 90-member team. Built knowledge base with Notion/Slack and automated workflows, reducing development time from 12 to 10 months.",
+        "achievements": [
+          "8th Place Worldwide",
+          "2 Months Development Saved",
+          "4 New Sponsors Acquired",
+          "¥14M Cost Reduction"
+        ]
       },
-      "product": {
-        "title": "Product Development",
-        "description": "From user research to PRD creation to collaboration with development teams, I drive products from conception through growth."
+      "bwsc25": {
+        "year": "2024-2025",
+        "title": "Becoming Project Manager",
+        "role": "PM / Race Strategist",
+        "description": "As PM overseeing 90 members, built ML-powered prediction system. Led complex Japan-Australia logistics and travel operations.",
+        "achievements": [
+          "Led 90-member Team",
+          "95%+ Prediction Accuracy",
+          "Established Non-personalized Decision Process"
+        ]
+      }
+    },
+    "education": {
+      "title": "Education",
+      "master": {
+        "period": "2024 - 2026",
+        "school": "Kogakuin University Graduate School",
+        "degree": "Master's in Mechanical Engineering"
       },
-      "automation": {
-        "title": "Business Automation",
-        "description": "Significantly improving team productivity through automation of repetitive tasks and workflow optimization."
+      "bachelor": {
+        "period": "2019 - 2024",
+        "school": "Kogakuin University",
+        "degree": "Bachelor's in Mechanical Systems Engineering"
       }
     }
   },
@@ -90,11 +110,19 @@
       }
     }
   },
-  "projects": {
+  "works": {
     "number": "03",
-    "title": "Projects",
-    "subtitle": "Selected Works 2022-2025",
-    "viewCaseStudy": "View Details",
+    "title": "Works",
+    "tabs": {
+      "projects": "Projects",
+      "skills": "Skills"
+    },
+    "projects": {
+      "subtitle": "Selected Works 2022-2025",
+      "viewCaseStudy": "View Details"
+    }
+  },
+  "projects": {
     "items": {
       "bwsc25": {
         "category": "Leadership",
@@ -131,61 +159,166 @@
         "title": "BWSC23 Solar Car Race",
         "period": "2022.01 - 2024.08",
         "description": "In managing a 90-person team, shortened development period from 12 to 10 months through DX-driven operational optimization. Achieved 8th place at the World Championship.",
-        "tags": ["DX", "Team Leadership", "World 8th"]
+        "tags": ["DX", "Team Leadership", "World 8th"],
+        "caseStudy": {
+          "overview": "Competed in the world's premier solar car race 'Bridgestone World Solar Challenge' as Japan's representative. As DX promotion leader, drove organizational reform and technical development, achieving 8th place worldwide.",
+          "challenge": {
+            "title": "Challenge",
+            "description": "In a 90-person student team, personalized development processes and inefficient communication were major issues. We needed to compete in the world championship with limited budget and time."
+          },
+          "approach": {
+            "title": "Approach",
+            "steps": [
+              "Built knowledge base using Notion",
+              "Automated routine tasks with Slack workflows",
+              "Introduced weekly sprint reviews",
+              "Implemented cross-departmental task visualization system"
+            ]
+          },
+          "results": {
+            "title": "Results",
+            "metrics": [
+              { "label": "Development Time Saved", "value": "2 months" },
+              { "label": "World Ranking", "value": "8th" },
+              { "label": "New Sponsors", "value": "4 companies" },
+              { "label": "Cost Reduction", "value": "¥14M" }
+            ]
+          }
+        }
       },
       "automation": {
         "category": "AI / Automation",
         "title": "Business Automation Tools",
         "period": "2025",
         "description": "Developed multiple internal tools including slide auto-generation and sales email automation. Achieved over 1600 hours of annual operational efficiency improvement.",
-        "tags": ["Automation", "AI", "-1600h/year"]
+        "tags": ["Automation", "AI", "-1600h/year"],
+        "caseStudy": {
+          "overview": "During my internship at AnyMind Group, I planned, developed, and operated multiple business automation tools. Contributed to organization-wide productivity improvement using AI technology.",
+          "challenge": {
+            "title": "Challenge",
+            "description": "Sales and marketing teams spent significant time on repetitive tasks. Slide creation and sales email writing were particularly personalized with inconsistent quality."
+          },
+          "approach": {
+            "title": "Approach",
+            "steps": [
+              "Conducted workflow interviews and bottleneck analysis",
+              "Designed slide auto-generation system using GPT-4 API",
+              "Combined sales email templates with AI generation",
+              "Continuous improvement based on user feedback"
+            ]
+          },
+          "results": {
+            "title": "Results",
+            "metrics": [
+              { "label": "Slide Creation Saved", "value": "-200h/year" },
+              { "label": "Sales Email Saved", "value": "-600h/year" },
+              { "label": "AI Deployment Sites", "value": "11 locations" },
+              { "label": "Annual Total Saved", "value": "1600h+" }
+            ]
+          }
+        }
       }
     }
   },
   "skills": {
-    "number": "05",
-    "title": "Skills",
     "categories": {
-      "technical": {
-        "title": "Technical Skills",
-        "items": ["Python", "SQL", "Machine Learning", "Data Analysis", "React", "TypeScript"]
-      },
-      "management": {
-        "title": "Management",
-        "items": ["Project Management", "Product Management", "Team Leadership", "Agile Development"]
-      },
-      "languages": {
-        "title": "Languages",
-        "items": ["Japanese (Native)", "Spanish (Native)", "English (Business)"]
-      },
-      "certifications": {
-        "title": "Certifications",
-        "items": ["Google Data Analytics Professional", "Control Design Onramp with Simulink"]
-      }
-    }
-  },
-  "education": {
-    "number": "04",
-    "title": "Education",
+      "technical": { "title": "Technical Skills" },
+      "management": { "title": "Management" },
+      "languages": { "title": "Languages" },
+      "certifications": { "title": "Certifications" }
+    },
     "items": {
-      "master": {
-        "period": "2024 - 2026",
-        "school": "Kogakuin University Graduate School",
-        "degree": "Master's in Mechanical Engineering",
-        "description": "Research on time-series data prediction and anomaly detection in the Automatic Control Laboratory."
+      "aiMl": {
+        "name": "AI & Machine Learning",
+        "description": "GPT-4/Claude integration, prediction model building, NLP",
+        "achievements": ["AI deployment across 11 Asian locations", "1600+ hours saved annually"],
+        "contributions": {
+          "bwsc25": "Built power generation/consumption prediction model",
+          "automation": "Developed automation tools using GPT-4 API"
+        }
       },
-      "bachelor": {
-        "period": "2019 - 2024",
-        "school": "Kogakuin University",
-        "degree": "Bachelor's in Mechanical Systems Engineering",
-        "gpa": "GPA: 3.33 / 4.00",
-        "description": "Majored in Mechanical Engineering, demonstrated leadership in the Solar Car Project."
+      "dataAnalysis": {
+        "name": "Data Analysis",
+        "description": "Python, BigQuery, statistical analysis, dashboard building",
+        "achievements": ["Google Data Analytics certified", "Race strategy optimization"],
+        "contributions": {
+          "bwsc25": "Built real-time data collection and analysis system",
+          "bwsc23": "Established team performance analysis infrastructure"
+        }
+      },
+      "productDev": {
+        "name": "Product Development",
+        "description": "PRD creation, user research, agile development",
+        "achievements": ["Led multiple B2B products"],
+        "contributions": {
+          "automation": "Planned and developed AI product 'AnyAI'"
+        }
+      },
+      "webDev": {
+        "name": "Web Development",
+        "description": "React, TypeScript, Three.js, Framer Motion",
+        "achievements": ["Internal tool development", "Portfolio site construction"],
+        "contributions": {}
+      },
+      "controlEng": {
+        "name": "Control Engineering",
+        "description": "Simulink, time-series prediction, anomaly detection",
+        "achievements": ["Control Design certified", "Energy management optimization"],
+        "contributions": {
+          "bwsc25": "Vehicle control system optimization",
+          "bwsc23": "Energy Management System design"
+        }
+      },
+      "leadership": {
+        "name": "Leadership",
+        "description": "90-person team management, decision making, org design",
+        "achievements": ["Led 90-person team", "Achieved 8th place worldwide"],
+        "contributions": {
+          "bwsc25": "Led team as Project Manager",
+          "bwsc23": "Drove organizational reform as DX Leader"
+        }
+      },
+      "projectMgmt": {
+        "name": "Project Management",
+        "description": "Sprint operations, risk management, stakeholder coordination",
+        "achievements": ["Shortened development by 2 months", "Complex logistics management"],
+        "contributions": {
+          "bwsc25": "Japan-Australia import/export and travel operations",
+          "automation": "Led AI deployment project"
+        }
+      },
+      "fundraising": {
+        "name": "Sales & Fundraising",
+        "description": "Sponsor acquisition, proposals, negotiation",
+        "achievements": ["Acquired 4 new sponsors", "Raised ¥7M in funding"],
+        "contributions": {
+          "bwsc23": "Restructured sponsor acquisition strategy"
+        }
       }
+    },
+    "detail": {
+      "relatedProjects": "Related Projects",
+      "howAcquired": "How Acquired",
+      "viewProject": "View Project"
     }
   },
   "contact": {
+    "number": "03",
+    "title": "Contact",
     "heading": "Let's Connect",
+    "headingLine1": "Let's Create",
+    "headingLine2": " Impact Together",
     "subheading": "Feel free to reach out about new projects or collaboration opportunities.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send. Please try again."
+    },
+    "alternate": "or",
     "cta": "Contact on LinkedIn"
   },
   "footer": {

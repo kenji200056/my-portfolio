@@ -1,70 +1,72 @@
-import type { SkillsData } from '../types';
+import type { SkillConfig } from '../types';
 
-export const skillsData: SkillsData = {
+// 翻訳キーベースのスキル設定
+// 実際の名前、説明、実績は翻訳ファイルから取得
+export const skillsConfig = {
   technical: [
     {
-      name: 'AI・機械学習',
+      id: 'aiMl',
+      translationKey: 'skills.items.aiMl',
       level: 90,
       icon: 'brain',
-      description: 'GPT-4/Claude統合、予測モデル構築、自然言語処理',
-      achievements: ['アジア11拠点へのAI展開', '年間1600時間の業務削減'],
+      relatedProjectIds: ['bwsc25', 'automation'],
     },
     {
-      name: 'データ分析',
+      id: 'dataAnalysis',
+      translationKey: 'skills.items.dataAnalysis',
       level: 85,
       icon: 'chart',
-      description: 'Python, BigQuery, 統計分析',
-      achievements: ['Google Data Analytics認定取得'],
+      relatedProjectIds: ['bwsc25', 'bwsc23'],
     },
     {
-      name: 'プロダクト開発',
+      id: 'productDev',
+      translationKey: 'skills.items.productDev',
       level: 88,
       icon: 'cube',
-      description: 'PRD策定、ユーザーリサーチ、アジャイル開発',
-      achievements: ['複数のB2Bプロダクトのリード'],
+      relatedProjectIds: ['automation'],
     },
     {
-      name: 'Web開発',
+      id: 'webDev',
+      translationKey: 'skills.items.webDev',
       level: 80,
       icon: 'code',
-      description: 'React, TypeScript, Node.js',
-      achievements: ['自社ツール開発'],
+      relatedProjectIds: [],
     },
     {
-      name: '制御工学',
+      id: 'controlEng',
+      translationKey: 'skills.items.controlEng',
       level: 82,
       icon: 'settings',
-      description: 'MATLAB/Simulink, 自動制御',
-      achievements: ['Control Design認定取得'],
+      relatedProjectIds: ['bwsc25', 'bwsc23'],
     },
-  ],
+  ] as SkillConfig[],
   soft: [
     {
-      name: 'リーダーシップ',
+      id: 'leadership',
+      translationKey: 'skills.items.leadership',
       level: 92,
       icon: 'users',
-      description: '90人規模のチーム管理、クロスファンクショナル連携',
-      achievements: ['BWCSプロジェクトリーダー'],
+      relatedProjectIds: ['bwsc25', 'bwsc23'],
     },
     {
-      name: 'プロジェクト管理',
+      id: 'projectMgmt',
+      translationKey: 'skills.items.projectMgmt',
       level: 90,
       icon: 'clipboard',
-      description: 'スケジュール管理、リソース配分、リスク管理',
-      achievements: ['開発期間を2ヶ月短縮'],
+      relatedProjectIds: ['bwsc25', 'automation'],
     },
     {
-      name: '営業・資金調達',
+      id: 'fundraising',
+      translationKey: 'skills.items.fundraising',
       level: 78,
       icon: 'briefcase',
-      description: 'スポンサー獲得、プレゼンテーション',
-      achievements: ['700万円の資金調達'],
+      relatedProjectIds: ['bwsc23'],
     },
-  ],
+  ] as SkillConfig[],
   languages: [
-    { name: '日本語', level: 100, badge: 'Native' },
-    { name: 'スペイン語', level: 100, badge: 'Native' },
-    { name: '英語', level: 85, badge: 'Business' },
+    { id: 'japanese', name: '日本語', level: 100, badge: 'Native' },
+    { id: 'spanish', name: 'スペイン語', level: 100, badge: 'Native' },
+    { id: 'english', name: '英語', level: 85, badge: 'Business' },
   ],
   certifications: [
     'Google Data Analytics Professional Certification',
@@ -78,3 +80,10 @@ export const skillCategories = [
   { key: 'languages', color: '#8B7355' },
   { key: 'certifications', color: '#6B5344' },
 ] as const;
+
+// スキルIDから関連プロジェクトIDを取得するヘルパー
+export function getRelatedProjectIds(skillId: string): string[] {
+  const allSkills = [...skillsConfig.technical, ...skillsConfig.soft];
+  const skill = allSkills.find(s => s.id === skillId);
+  return skill?.relatedProjectIds || [];
+}
